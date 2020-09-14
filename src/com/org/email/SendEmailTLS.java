@@ -31,7 +31,7 @@ public class SendEmailTLS {
 		System.out.println("Email address "+email);
 
 		final String username = "lspevaluator@gmail.com";
-		final String password = "Lsp@@123";
+		final String password = "****";
 
 		Properties prop = new Properties();
 		prop.put("mail.smtp.host", "smtp.gmail.com");
