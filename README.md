@@ -1,6 +1,6 @@
 # SendEmail
 
-Export a jar file and move to the destination server where you want to run it.
+To use this program export a jar file and move to the destination server where you want to run it.
 
 **How to run the jar file**
 
