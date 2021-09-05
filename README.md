@@ -8,4 +8,4 @@ Export a jar file and move to the destination server where you want to run it.
 
 **Port#**: This is an optional field. Default value 587
 
-**dest_email**: This is an optioanl fiels. This is the destination email address. Default value kkapre08@gmail.com
+**dest_email**: This is an optioanl field. This is the destination email address. Default value kkapre08@gmail.com
