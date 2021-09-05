@@ -1,6 +1,8 @@
 # SendEmail
 
-How to run the file 
+Export a jar file and move to the destination server where you want to run it.
+
+**How to run the jar file**
 
 `java -jar SendEmail.jar {port#} {dest_email}`
 
