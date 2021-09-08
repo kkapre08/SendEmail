@@ -62,8 +62,8 @@ public class SendEmailTLS {
 					InternetAddress.parse(email)
 					);
 			message.setSubject("Testing Gmail TLS");
-			message.setText("Dear Mailer ,"
-					+ "\n\n I am the email you just triggered!");
+			message.setText("Dear Mailer,"
+					+ "\n\n I am the email you just triggered!!");
 
 			Transport.send(message);
 
