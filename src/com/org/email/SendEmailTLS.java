@@ -17,6 +17,7 @@ public class SendEmailTLS {
 	public static void main(String[] args) {
 
 		String port = "587";
+//		String port = "465";
 		String email = "kkapre08@gmail.com";
 		
 		if(args!=null && args.length>0) {
@@ -31,18 +32,20 @@ public class SendEmailTLS {
 		System.out.println("Email address "+email);
 
 		final String username = "lspevaluator@gmail.com";
-		final String password = "****";
+		final String password = "***";
 
 		Properties prop = new Properties();
 		prop.put("mail.smtp.host", "smtp.gmail.com");
 		
 		//465
 		
+		
 		prop.put("mail.smtp.port", port);
-		prop.put("mail.smtp.auth", "true");
-		prop.put("mail.smtp.starttls.enable", "true"); //TLS
-		prop.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-
+		prop.put("mail.smtp.auth", true);
+		prop.put("mail.smtp.ssl.enable", true);
+		prop.put("mail.smtp.starttls.enable", true); //TLS
+//		prop.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+		
 		Session session = Session.getInstance(prop,
 				new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
@@ -59,8 +62,8 @@ public class SendEmailTLS {
 					InternetAddress.parse(email)
 					);
 			message.setSubject("Testing Gmail TLS");
-			message.setText("Dear Mail Crawler,"
-					+ "\n\n Please do not spam my email!");
+			message.setText("Dear Mailer ,"
+					+ "\n\n I am the email you just triggered!");
 
 			Transport.send(message);
 
